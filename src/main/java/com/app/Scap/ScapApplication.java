@@ -1,5 +1,7 @@
 package com.app.Scap;
 
+import com.app.Scap.view.menuScap;
+import javafx.application.Application;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ScapApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ScapApplication.class, args);
+		//SpringApplication.run(ScapApplication.class, args);
+		Application.launch(menuScap.class, args);
 
 	}
 

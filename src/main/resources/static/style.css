@@ -1,0 +1,15 @@
+.my-rect { 
+  -fx-background-color: #F0F0F0;
+}
+
+.test {
+  -fx-font-size: 24px;
+  -fx-font-family: Arial;
+  -fx-fill: red;
+}
+
+.myButton {
+  -fx-background-color: #f0ffff;
+  -fx-text-fill: #00ffff;
+  -fx-font-size: 14px;
+}
