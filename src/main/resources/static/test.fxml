@@ -7,8 +7,49 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.* ?>
 
-<StackPane fx:controller="com.app.Scap.view.menuScap" xmlns:fx="http://javafx.com/javafx"
-           stylesheets="/static/style.css">
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+<?import javafx.scene.image.Image?>
 
-    <Button fx:id="myButton" text="UwU" onAction="#handleButtonClick" styleClass="myButton"/>
-</StackPane>
+<?import javafx.scene.image.ImageView?>
+<GridPane fx:controller="com.app.Scap.view.menuScap" xmlns:fx="http://javafx.com/javafx"
+          stylesheets="/static/style.css" styleClass="body" >
+
+    <VBox styleClass="logo">
+        <ImageView
+        fx:id="imageView"
+        fitHeight="150.0"
+        fitWidth="200.0"
+        layoutX="61.0"
+        layoutY="83.0"
+        pickOnBounds="true"
+        preserveRatio="true"
+       GridPane.columnIndex="0" GridPane.rowIndex="9" >
+        </ImageView>
+
+    </VBox>
+
+
+    <Text text="Login"
+          GridPane.columnIndex="0" GridPane.rowIndex="0"
+          GridPane.columnSpan="3"
+          styleClass="body"
+    />
+    <Label text="User Name: "
+    GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="Password: "
+    GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+    <PasswordField fx:id="passwordField"
+    GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Button fx:id="myButton" text="UwU" onAction="#handleButtonClick" styleClass="body"
+    GridPane.columnIndex="1" GridPane.rowIndex="3"
+    />
+    <Label fx:id="lblMensaje"
+    text=""
+    GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+</GridPane>

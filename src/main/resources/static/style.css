@@ -1,15 +1,29 @@
+.body {
+  -fx-background-color: #1d1d1d;
+  -fx-text-fill: #00ffff;
+  -fx-font-family: "Overpass Mono", monospace;
+  -fx-padding: 25;
+  -fx-margin: 25;
+}
+
+.bar{
+  -fx-background-color: #464b55;
+  -fx-padding: 10px;
+  -fx-display: flex;
+}
+
 .my-rect { 
   -fx-background-color: #F0F0F0;
 }
 
-.test {
-  -fx-font-size: 24px;
-  -fx-font-family: Arial;
-  -fx-fill: red;
-}
 
 .myButton {
   -fx-background-color: #f0ffff;
   -fx-text-fill: #00ffff;
   -fx-font-size: 14px;
+}
+
+.logo {
+    -fx-fit-width: 50px;
+    -fx-fit-height: 50px;
 }
