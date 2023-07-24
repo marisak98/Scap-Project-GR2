@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="gridPane" prefHeight="272.0" prefWidth="553.0" styleClass="body" stylesheets="/static/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.Scap.controllers.LoginScapControler">
+
+    <Text fx:id="titleText" styleClass="body" text="Welcome To SCAP" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+
+    <Label text="User Name:   " GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+    <TextField GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+    <Label prefHeight="18.0" prefWidth="96.0" text="Password: " GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+    <PasswordField fx:id="passwordField" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+    <Button fx:id="btnLogin" onAction="#Login" prefHeight="38.0" prefWidth="136.0" styleClass="body" text="Login" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+    <Label fx:id="lblMensaje" styleClass="body" text="" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+
+    <ImageView fx:id="imageView"  styleClass="imageView" fitHeight="100.0" fitWidth="300.0" layoutX="570.0" layoutY="790.0"
+               nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@img/LoginTest.jpg" />
+        </image>
+    </ImageView>
+
+
+
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="181.0" minWidth="109.0" prefWidth="126.0" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="115.0" minWidth="0.0" prefWidth="102.0" />
+      <ColumnConstraints maxWidth="225.0" minWidth="102.0" prefWidth="163.0" />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints maxWidth="8.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints maxWidth="1.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints maxWidth="18.0" minWidth="0.0" prefWidth="0.0" />
+
+    </columnConstraints>
+    <rowConstraints>
+      <RowConstraints maxHeight="149.0" minHeight="27.0" prefHeight="81.0" />
+        <RowConstraints maxHeight="132.0" minHeight="7.0" prefHeight="17.0" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="144.0" minHeight="11.0" prefHeight="18.0" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="139.0" minHeight="0.0" prefHeight="20.0" />
+      <RowConstraints maxHeight="167.0" minHeight="32.0" prefHeight="137.0" />
+    </rowConstraints>
+</GridPane>

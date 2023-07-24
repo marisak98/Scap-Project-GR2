@@ -1,0 +1,40 @@
+.sidebar {
+    -fx-padding: 15;
+    -fx-spacing: 10;    
+    -fx-background-color: #585858;    
+    -fx-border-color: #38568a;
+    -fx-border-width: 1px;
+    -fx-padding: 10;
+    -fx-spacing: 8;
+}
+
+.sidebar  .label {
+    -fx-text-fill: white;
+}
+
+.pay:hover{
+  -fx-border-color: #990099;
+  -fx-border-width: 0px 0px 3px 0px;
+}
+
+.dash:hover{
+  -fx-border-color: #009966;
+  -fx-border-width: 0px 0px 3px 0px;
+}
+
+.help:hover{
+  -fx-border-color: #cc0033;
+  -fx-border-width: 0px 0px 3px 0px;
+}
+
+.return:hover{
+  -fx-background-color: #0f121c;
+  -fx-border-color: #7ed97e;
+  -fx-border-width: 0px 0px 3px 0px;
+}
+
+.bar:hover{
+  -fx-background-color: #0b0c4a;
+  -fx-border-color: #7f5fde;
+  -fx-border-width: 0px 0px 3px 0px;
+}
