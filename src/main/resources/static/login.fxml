@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane fx:id="gridPane" prefHeight="272.0" prefWidth="553.0" styleClass="body" stylesheets="/static/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.Scap.controllers.LoginScapControler">
+<GridPane fx:id="gridPane" prefHeight="575.0" prefWidth="700.0" styleClass="body" stylesheets="/static/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.Scap.controllers.LoginScapControler">
 
     <Text fx:id="titleText" styleClass="body" text="Welcome To SCAP" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
 

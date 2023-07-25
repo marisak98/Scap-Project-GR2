@@ -1,29 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="mainBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="/static/BorderSliderBar.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.Scap.controllers.mainMenuPaneController">
+<AnchorPane fx:id="mainBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="820.0" stylesheets="/static/BorderSliderBar.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.Scap.controllers.mainMenuPaneController">
     <children>
-        <BorderPane prefHeight="369.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
+        <BorderPane prefHeight="417.0" prefWidth="700.0" styleClass="sidebar" AnchorPane.bottomAnchor="-13.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
-            <AnchorPane fx:id="paneSlide" prefHeight="380.0" prefWidth="160.0" styleClass="sidebar" BorderPane.alignment="CENTER">
-                <ToolBar layoutX="-4.0" prefHeight="373.0" prefWidth="164.0" styleClass="sidebar" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <items>
-                        <Button fx:id="btnUsers" mnemonicParsing="false" prefHeight="64.0" prefWidth="45.0" text=" " />
-                    </items>
-                </ToolBar>
+            <AnchorPane fx:id="paneSlide" prefHeight="413.0" prefWidth="160.0" styleClass="slider" BorderPane.alignment="CENTER">
+                <VBox layoutX="57.0" layoutY="73.0" prefHeight="54.0" prefWidth="80.0" styleClass="sidebar" AnchorPane.bottomAnchor="280.0" AnchorPane.leftAnchor="57.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="63.0">
+
+                        <Button fx:id="btnUsers" mnemonicParsing="false" prefHeight="65.0" prefWidth="75.0" text=" " />
+
+                </VBox>
+               <BorderPane.margin>
+                  <Insets top="1.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets top="1.0" />
+               </padding>
             </AnchorPane>
          </left>
+         <center>
+            <ScrollPane prefHeight="700.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+              <content>
+                      <TableView prefHeight="600.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+                          <columns>
+                              <TableColumn fx:id="idUsuario" prefWidth="113.0" text="ID" />
+                              <TableColumn fx:id="idEmpleado" prefWidth="92.0" text="Empleado" />
+                              <TableColumn fx:id="usuario" prefWidth="89.0" text="Usuario" />
+                              <TableColumn fx:id="descripcion" minWidth="6.0" prefWidth="89.0" text="Descripcion" />
+                              <TableColumn fx:id="rol" minWidth="2.0" prefWidth="138.0" text="Rol" />
+                          </columns>
+                     <padding>
+                        <Insets top="1.0" />
+                     </padding>
+                      </TableView>
+              </content>
+            </ScrollPane>
+         </center>
+         <top>
+      
+              <AnchorPane prefHeight="10.0" prefWidth="700.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+                  <Button fx:id="btnBar2" mnemonicParsing="false" onMouseClicked="#run2" prefHeight="28.0" prefWidth="49.0" styleClass="return" text="󰌑" />
+                      <Button fx:id="btnBar1" layoutX="2.0" mnemonicParsing="false" onMouseClicked="#run1" prefHeight="28.0" prefWidth="49.0" styleClass="bar" text="" />
+                      <Button fx:id="btnDashB" layoutX="374.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" styleClass="dash" text="  DASHBOARD" />
+                      <Button fx:id="btnPayment" layoutX="500.0" layoutY="1.0" mnemonicParsing="false" styleClass="pay" text="󱢐 PAGOS" />
+                      <Button fx:id="btnHelp" layoutX="600.0" layoutY="1.0" mnemonicParsing="false" styleClass="help" text="󰞋 AYUDA" />
+              </AnchorPane>
+         </top>
+
         </BorderPane>
-        <ToolBar layoutX="115.0" prefHeight="39.0" prefWidth="485.0" styleClass="sidebar" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <items>
-            <Button fx:id="btnBar2" mnemonicParsing="false" onMouseClicked="#run2" prefHeight="26.0" prefWidth="0.0" styleClass="return" text="󰌑" />
-                <Button fx:id="btnBar1" mnemonicParsing="false" onMouseClicked="#run1" prefHeight="28.0" prefWidth="49.0" styleClass="bar" text="" />
-                <Button fx:id="btnDashB" mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" styleClass="dash" text="  DASHBOARD" />
-                <Button fx:id="btnPayment" mnemonicParsing="false" styleClass="pay" text="󱢐 PAGOS" />
-                <Button fx:id="btnHelp" mnemonicParsing="false" styleClass="help" text="󰞋 AYUDA" />
-            </items>
-        </ToolBar>
     </children>
 </AnchorPane>

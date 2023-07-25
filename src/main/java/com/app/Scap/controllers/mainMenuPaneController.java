@@ -31,6 +31,8 @@ public class mainMenuPaneController implements Initializable {
     private Button btnBar2;
     @FXML
     private AnchorPane paneSlide;
+    @FXML
+    private Button btnUsers;
 
 
 

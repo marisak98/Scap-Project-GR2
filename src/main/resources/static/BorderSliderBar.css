@@ -2,14 +2,14 @@
     -fx-padding: 15;
     -fx-spacing: 10;    
     -fx-background-color: #585858;    
-    -fx-border-color: #38568a;
+    -fx-border-color: #606369;
     -fx-border-width: 1px;
     -fx-padding: 10;
     -fx-spacing: 8;
 }
 
 .sidebar  .label {
-    -fx-text-fill: white;
+    -fx-text-fill: #262625;
 }
 
 .pay:hover{
@@ -37,4 +37,8 @@
   -fx-background-color: #0b0c4a;
   -fx-border-color: #7f5fde;
   -fx-border-width: 0px 0px 3px 0px;
+}
+
+.slider{
+    -fx-background-color: #2a2b2e;
 }
