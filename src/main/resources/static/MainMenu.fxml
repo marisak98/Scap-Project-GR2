@@ -23,15 +23,15 @@
             </AnchorPane>
          </left>
          <center>
-            <ScrollPane prefHeight="700.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+            <ScrollPane prefHeight="1200.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
               <content>
-                      <TableView prefHeight="600.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+                      <TableView fx:id="userTable" BorderPane.alignment="CENTER" >
                           <columns>
                               <TableColumn fx:id="idUsuario" prefWidth="113.0" text="ID" />
-                              <TableColumn fx:id="idEmpleado" prefWidth="92.0" text="Empleado" />
-                              <TableColumn fx:id="usuario" prefWidth="89.0" text="Usuario" />
-                              <TableColumn fx:id="descripcion" minWidth="6.0" prefWidth="89.0" text="Descripcion" />
-                              <TableColumn fx:id="rol" minWidth="2.0" prefWidth="138.0" text="Rol" />
+                              <TableColumn fx:id="idEmpleado" prefWidth="92.0" text="Factura" />
+                              <TableColumn fx:id="usuario" prefWidth="89.0" text="Codigo" />
+                              <TableColumn fx:id="descripcion" minWidth="6.0" prefWidth="89.0" text="Vendedor" />
+                              <TableColumn fx:id="rol" minWidth="2.0" prefWidth="138.0" text="Fecha" />
                           </columns>
                      <padding>
                         <Insets top="1.0" />

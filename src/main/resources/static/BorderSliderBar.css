@@ -6,6 +6,7 @@
     -fx-border-width: 1px;
     -fx-padding: 10;
     -fx-spacing: 8;
+
 }
 
 .sidebar  .label {
@@ -41,4 +42,9 @@
 
 .slider{
     -fx-background-color: #2a2b2e;
+}
+
+#userTable{
+ -fx-border-width: 90%;
+ -fx-border-heigth: 90%;
 }

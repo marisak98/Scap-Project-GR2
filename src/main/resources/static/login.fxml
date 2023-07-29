@@ -5,9 +5,92 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane fx:id="gridPane" prefHeight="575.0" prefWidth="700.0" styleClass="body" stylesheets="/static/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.Scap.controllers.LoginScapControler">
+<BorderPane fx:id="bordePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" styleClass="body" stylesheets="/static/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.Scap.controllers.LoginScapControler">
 
-    <Text fx:id="titleText" styleClass="body" text="Welcome To SCAP" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+    <left>
+
+        <!-- An AnchorPane in the Left BorderPane -->
+        <AnchorPane prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: #A9A9A9;" BorderPane.alignment="CENTER">
+            <children>
+
+                <!-- Logo -->
+                <ImageView fx:id="imageView"  styleClass="imageView" fitHeight="400.0" fitWidth="400.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true"
+                           >
+                    <image>
+                        <Image url="@img/logo.png" />
+                    </image>
+                </ImageView>
+
+            </children>
+        </AnchorPane>
+    </left>
+
+    <right>
+        <AnchorPane prefHeight="700.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+
+ <children>
+
+     <ImageView fitHeight="55.0" fitWidth="100.0" layoutX="120.0"  layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+             <Image url="@img/logo.png"/>
+         </image>
+     </ImageView>
+     <Label fx:id="newLabel" layoutX="203.0" layoutY="1.0" prefHeight="57.0" prefWidth="263.0"  text="Concurso Prpgraming">
+
+     </Label>
+     <Button fx:id="cancelButton" layoutX="502.0" layoutY="13.0" mnemonicParsing="false" style="button2" text="Cancelar">
+         <font>
+             <Font name="SansSerif Regular" size="15.0" />
+         </font>
+     </Button>
+
+     <TextField fx:id="loginUsernameTextField" layoutX="150.0" layoutY="100.0" prefHeight="30.0" prefWidth="300.0" promptText="Usuario" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+         <font>
+             <Font name="SansSerif Regular" size="14.0" />
+         </font>
+     </TextField>
+     <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+             <Image url="@img/Login2.jpg" />
+         </image>
+     </ImageView>
+     <PasswordField fx:id="loginPasswordPasswordField" layoutX="150.0" layoutY="140.0" prefHeight="30.0" prefWidth="300.0" promptText="Contraseña" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+         <font>
+             <Font name="SansSerif Regular" size="14.0" />
+         </font>
+     </PasswordField>
+     <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+             <Image url="@img/LoginTest.jpg" />
+         </image>
+     </ImageView>
+     <CheckBox layoutX="150.0" layoutY="195.0" mnemonicParsing="false" style="-fx-text-fill: #A9A9A9;" text="Recordarme">
+         <font>
+             <Font name="SansSerif Regular" size="15.0" />
+         </font>
+     </CheckBox>
+
+     <!-- Forgot your password button -->
+     <Button layoutX="190.0" layoutY="235.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: #Aac9A9A9;" text="Recuperar contraseña" underline="true">
+         <font>
+             <Font size="15.0" />
+         </font>
+     </Button>
+
+     <!-- Login Button -->
+     <Button fx:id="btnLogin" layoutX="335.0" layoutY="195.0" mnemonicParsing="false" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Login" onAction="#Login">
+         <font>
+             <Font size="15.0" />
+         </font>
+     </Button>
+ </children>
+        </AnchorPane>
+    </right>
+
+
+
+    <!--   Before   -->
+    <Text fx:id="titleText" styleClass="body" text="Welcome To SCAP"  />
 
     <Label text="User Name:   " GridPane.columnIndex="2" GridPane.rowIndex="2" />
 
@@ -17,36 +100,13 @@
 
     <PasswordField fx:id="passwordField" GridPane.columnIndex="3" GridPane.rowIndex="3" />
 
-    <Button fx:id="btnLogin" onAction="#Login" prefHeight="38.0" prefWidth="136.0" styleClass="body" text="Login" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+    <Button fx:id="btnLogin2" onAction="#Login" prefHeight="38.0" prefWidth="136.0" styleClass="body" text="Login" GridPane.columnIndex="2" GridPane.rowIndex="4" />
     <Label fx:id="lblMensaje" styleClass="body" text="" GridPane.columnIndex="8" GridPane.rowIndex="4" />
 
-    <ImageView fx:id="imageView"  styleClass="imageView" fitHeight="100.0" fitWidth="300.0" layoutX="570.0" layoutY="790.0"
-               nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
-        <image>
-            <Image url="@img/LoginTest.jpg" />
-        </image>
-    </ImageView>
 
 
 
 
-    <columnConstraints>
-        <ColumnConstraints hgrow="ALWAYS" maxWidth="181.0" minWidth="109.0" prefWidth="126.0" />
-        <ColumnConstraints hgrow="ALWAYS" maxWidth="115.0" minWidth="0.0" prefWidth="102.0" />
-      <ColumnConstraints maxWidth="225.0" minWidth="102.0" prefWidth="163.0" />
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints maxWidth="8.0" minWidth="0.0" prefWidth="0.0" />
-      <ColumnConstraints maxWidth="1.0" minWidth="0.0" prefWidth="0.0" />
-      <ColumnConstraints maxWidth="18.0" minWidth="0.0" prefWidth="0.0" />
 
-    </columnConstraints>
-    <rowConstraints>
-      <RowConstraints maxHeight="149.0" minHeight="27.0" prefHeight="81.0" />
-        <RowConstraints maxHeight="132.0" minHeight="7.0" prefHeight="17.0" vgrow="ALWAYS" />
-      <RowConstraints maxHeight="144.0" minHeight="11.0" prefHeight="18.0" vgrow="ALWAYS" />
-      <RowConstraints maxHeight="139.0" minHeight="0.0" prefHeight="20.0" />
-      <RowConstraints maxHeight="167.0" minHeight="32.0" prefHeight="137.0" />
-    </rowConstraints>
-</GridPane>
+
+</BorderPane>

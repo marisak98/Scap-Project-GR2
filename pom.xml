@@ -95,6 +95,13 @@
 			<version>20</version>
 		</dependency>
 
+		<!-- Maridb Dependency -->
+		<dependency>
+			<groupId>org.mariadb.jdbc</groupId>
+			<artifactId>mariadb-java-client</artifactId>
+			<version>3.1.2</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
