@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -25,6 +26,8 @@ import java.util.logging.Logger;
 
 public class mainMenuPaneController implements Initializable {
 
+    private boolean tableshow = false;
+
     @FXML
     private Button btnBar1;
     @FXML
@@ -33,6 +36,8 @@ public class mainMenuPaneController implements Initializable {
     private AnchorPane paneSlide;
     @FXML
     private Button btnUsers;
+    @FXML
+    private TableView userTable;
 
 
 
@@ -95,5 +100,12 @@ public class mainMenuPaneController implements Initializable {
                 btnBar2.setVisible(true);
             }
         });
+    }
+
+    public void showUsers(ActionEvent actionEvent) {
+
+        tableshow = !tableshow;
+        userTable.setVisible(tableshow);
+
     }
 }

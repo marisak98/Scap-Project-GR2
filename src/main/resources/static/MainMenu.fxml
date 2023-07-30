@@ -11,7 +11,7 @@
             <AnchorPane fx:id="paneSlide" prefHeight="413.0" prefWidth="160.0" styleClass="slider" BorderPane.alignment="CENTER">
                 <VBox layoutX="57.0" layoutY="73.0" prefHeight="54.0" prefWidth="80.0" styleClass="sidebar" AnchorPane.bottomAnchor="280.0" AnchorPane.leftAnchor="57.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="63.0">
 
-                        <Button fx:id="btnUsers" mnemonicParsing="false" prefHeight="65.0" prefWidth="75.0" text=" " />
+                        <Button fx:id="btnUsers" mnemonicParsing="false" prefHeight="65.0" prefWidth="75.0" text=" "  onAction="#showUsers"/>
 
                 </VBox>
                <BorderPane.margin>
@@ -25,13 +25,13 @@
          <center>
             <ScrollPane prefHeight="1200.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
               <content>
-                      <TableView fx:id="userTable" BorderPane.alignment="CENTER" >
+                      <TableView fx:id="userTable" BorderPane.alignment="CENTER" visible="false">
                           <columns>
                               <TableColumn fx:id="idUsuario" prefWidth="113.0" text="ID" />
-                              <TableColumn fx:id="idEmpleado" prefWidth="92.0" text="Factura" />
-                              <TableColumn fx:id="usuario" prefWidth="89.0" text="Codigo" />
-                              <TableColumn fx:id="descripcion" minWidth="6.0" prefWidth="89.0" text="Vendedor" />
-                              <TableColumn fx:id="rol" minWidth="2.0" prefWidth="138.0" text="Fecha" />
+                              <TableColumn fx:id="idEmpleado" prefWidth="92.0" text="Empleado ID" />
+                              <TableColumn fx:id="usuario" prefWidth="89.0" text="Usuarios" />
+                              <TableColumn fx:id="descripcion" minWidth="6.0" prefWidth="89.0" text="Descripcion" />
+                              <TableColumn fx:id="rol" minWidth="2.0" prefWidth="138.0" text="Rol" />
                           </columns>
                      <padding>
                         <Insets top="1.0" />

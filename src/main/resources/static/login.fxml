@@ -17,7 +17,7 @@
                 <ImageView fx:id="imageView"  styleClass="imageView" fitHeight="400.0" fitWidth="400.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true"
                            >
                     <image>
-                        <Image url="@img/logo.png" />
+                        <Image url="@img/Login2.jpg" />
                     </image>
                 </ImageView>
 
@@ -32,13 +32,13 @@
 
      <ImageView fitHeight="55.0" fitWidth="100.0" layoutX="120.0"  layoutY="5.0" pickOnBounds="true" preserveRatio="true">
          <image>
-             <Image url="@img/logo.png"/>
+             <Image url="@img/LoginTest.jpg"/>
          </image>
      </ImageView>
      <Label fx:id="newLabel" layoutX="203.0" layoutY="1.0" prefHeight="57.0" prefWidth="263.0"  text="Concurso Prpgraming">
 
      </Label>
-     <Button fx:id="cancelButton" layoutX="502.0" layoutY="13.0" mnemonicParsing="false" style="button2" text="Cancelar">
+     <Button fx:id="cancelButton" layoutX="502.0" layoutY="13.0" mnemonicParsing="false" text="Cancelar">
          <font>
              <Font name="SansSerif Regular" size="15.0" />
          </font>
