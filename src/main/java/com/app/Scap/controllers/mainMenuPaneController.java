@@ -33,12 +33,13 @@ public class mainMenuPaneController implements Initializable {
     @FXML
     private Button btnBar2;
     @FXML
+    private Button btnDashB;
+    @FXML
     private AnchorPane paneSlide;
     @FXML
     private Button btnUsers;
     @FXML
     private TableView userTable;
-
 
 
     @Override
@@ -63,7 +64,7 @@ public class mainMenuPaneController implements Initializable {
 
 
         }catch (IOException ex){
-            Logger.getLogger(MenuControler.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AdminMenuControler.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     @FXML
@@ -108,4 +109,30 @@ public class mainMenuPaneController implements Initializable {
         userTable.setVisible(tableshow);
 
     }
+
+    public void dashBoard(ActionEvent event){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/static/AdminPane.fxml"));
+
+            Parent root = loader.load();
+
+            AdminMenuControler controller = new AdminMenuControler();
+
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+
+            stage.setScene(scene);
+            stage.show();
+
+            stage.setOnCloseRequest(e -> controller.closeWindows());
+
+            Stage myStage = (Stage) this.btnDashB.getScene().getWindow();
+            myStage.close();
+
+
+        } catch (IOException exception){
+            Logger.getLogger(AdminMenuControler.class.getName()).log(Level.SEVERE, null, exception);
+        }
+    }
+
 }

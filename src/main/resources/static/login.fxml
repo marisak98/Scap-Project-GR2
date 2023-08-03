@@ -35,7 +35,7 @@
              <Image url="@img/LoginTest.jpg"/>
          </image>
      </ImageView>
-     <Label fx:id="newLabel" layoutX="203.0" layoutY="1.0" prefHeight="57.0" prefWidth="263.0"  text="Concurso Prpgraming">
+     <Label fx:id="newLabel" layoutX="203.0" layoutY="1.0" prefHeight="57.0" prefWidth="263.0"  text="WELCOME TO SCAP-SD1">
 
      </Label>
      <Button fx:id="cancelButton" layoutX="502.0" layoutY="13.0" mnemonicParsing="false" text="Cancelar">
@@ -44,7 +44,7 @@
          </font>
      </Button>
 
-     <TextField fx:id="loginUsernameTextField" layoutX="150.0" layoutY="100.0" prefHeight="30.0" prefWidth="300.0" promptText="Usuario" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+     <TextField fx:id="loginUsername" layoutX="150.0" layoutY="100.0" prefHeight="30.0" prefWidth="300.0" promptText="Usuario" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
          <font>
              <Font name="SansSerif Regular" size="14.0" />
          </font>
@@ -54,7 +54,7 @@
              <Image url="@img/Login2.jpg" />
          </image>
      </ImageView>
-     <PasswordField fx:id="loginPasswordPasswordField" layoutX="150.0" layoutY="140.0" prefHeight="30.0" prefWidth="300.0" promptText="Contraseña" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+     <PasswordField fx:id="loginPassword" layoutX="150.0" layoutY="140.0" prefHeight="30.0" prefWidth="300.0" promptText="Contraseña" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
          <font>
              <Font name="SansSerif Regular" size="14.0" />
          </font>

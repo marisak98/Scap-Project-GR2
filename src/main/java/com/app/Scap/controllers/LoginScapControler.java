@@ -1,13 +1,15 @@
 package com.app.Scap.controllers;
-
+import com.app.Scap.DAO.UsuarioDao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
 import javafx.stage.Screen;
 
@@ -23,12 +25,15 @@ import java.util.logging.Logger;
 public class LoginScapControler implements Initializable {
     @FXML
     private ImageView imageView;
-    @FXML
-    private GridPane gridPane;
+
     @FXML
     private Button btnLogin;
     @FXML
-    private Label lblMensaje;
+    private TextField loginUsername;
+    @FXML
+    private PasswordField loginPassword;
+
+    private AuthController authController;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -49,30 +54,51 @@ public class LoginScapControler implements Initializable {
     }
 
 
+    public void setAuthController(AuthController authController){
+        this.authController = authController;
+    }
+
     @FXML
     public void Login(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/static/MainMenu.fxml"));
+            String usuario = loginUsername.getText();
+            String clave = loginPassword.getText();
+            if (authController != null && authController.loginUsuarios(usuario, clave)) {
 
-            Parent root = loader.load();
+                try {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/static/MainMenu.fxml"));
 
-            mainMenuPaneController controller = new mainMenuPaneController();
+                    Parent root = loader.load();
 
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
+                    mainMenuPaneController controller = new mainMenuPaneController();
 
-            stage.setScene(scene);
-            stage.show();
+                    Scene scene = new Scene(root);
+                    Stage stage = new Stage();
 
-            stage.setOnCloseRequest(e -> controller.closeWindow());
+                    stage.setScene(scene);
+                    stage.show();
 
-            Stage myStage = (Stage) this.btnLogin.getScene().getWindow();
-            myStage.close();
+                    stage.setOnCloseRequest(e -> controller.closeWindow());
 
+                    Stage myStage = (Stage) this.btnLogin.getScene().getWindow();
+                    myStage.close();
 
-        } catch (IOException exception){
-            Logger.getLogger(MenuControler.class.getName()).log(Level.SEVERE, null, exception);
-        }
+                    mostrarNotificacion("Inicio de Session", "Sesión iniciada correctamente.",
+                            Alert.AlertType.INFORMATION);
+
+                } catch (IOException exception) {
+                    Logger.getLogger(AdminMenuControler.class.getName()).log(Level.SEVERE, null, exception);
+                }
+            } else {
+                mostrarNotificacion("Error de Inicio de Sesión", "Credenciales incorrectas. Intente nuevamente.", Alert.AlertType.ERROR);
+            }
+    }
+
+    private void mostrarNotificacion(String titulo, String mesaje, Alert.AlertType tipo){
+        Alert alert = new Alert(tipo);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mesaje);
+        alert.showAndWait();
     }
 
 }
